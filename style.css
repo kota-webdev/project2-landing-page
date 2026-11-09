@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #fcfaf6;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header and Main Navigation */
+
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  position: absolute;
+  left: 1.5rem;
+}
+
+#header-section {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  position: relative;
+  background-color: #35312e;
+  padding: 0.5rem 1.5rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-link {
+  display: inline-block;
+  color: white;
+  margin: 0 15px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+}
+
+.nav-link::after {
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #9c7864;
+  border-radius: 30px;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-out;
+  content: '';
+  position: absolute;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link:focus {
+  outline: 2px solid #fcfaf6;
+  outline-offset: 2px;
+}
+
+.nav-link:active {
+  transform: scale(0.98);
+}
+
+.nav-link[aria-current="page"] {
+  background-color: #3b82f6;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500; 
+  font-style: normal;
+}
+
+#hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f3eb;
+  padding: 1.5rem;
+  gap: 4rem;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+  padding: 1.5rem;
+}
+
+.hero-content h1, .hero-content p {
+  text-align: center;
+  margin: 2rem;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  max-width: 450px;
+  height: auto;
+  margin-top: 6%;
+  margin-left: 15%;
+  margin-right: auto;
+}
+
+.cta-button {
+  position: relative;
+  align-self: center;
+  border: none;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #9c7864;
+  padding: 1rem;
+  border-radius: 50px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400; 
+  font-style: normal;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #b08d7a;
+  transform: scale(1.05);
+}
+
+/* Line Split after Hero Section */
+
+.line-bar {
+  background-color: #35312e;
+  border: none;
+  height: 2px;
+  margin: 5rem auto;
+  width: 65%;
+}
+
+/* Top View Image of Pho Section */
+
+.top-view-image {
+  text-align: center;
+  margin: 1rem;
+}
+
+.top-view-image img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 0;
+  margin: 2rem auto;
+  border: 1px solid #35312e;
+  border-radius: 15px;
+}
+
+/* Why Pho is Special Section */
+
+.why-its-special {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 3px solid #35312e;
+  color: white;
+  padding: 3rem;
+  background-color: #9c7864;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.why-its-special h2 {
+  font-size: 1.7rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 500; 
+  font-style: normal;
+}
+
+.why-its-special p {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Pho Ingredients Table and Instructions */
+
+#ingredients-and-instructions.recipe-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #f7f3eb;
+  gap: 6rem;
+  padding: 2.5rem;
+  margin: 5rem auto;
+}
+
+#ingredients-and-instructions h2 {
+  padding: 10px;
+  margin: 15px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 500; 
+  font-style: normal;
+}
+
+.ingredients-table,
+.instructions {
+  width: 100%;
+  max-width: 520px;
+  border-collapse: collapse;
+}
+
+.instructions p {
+  padding: 2rem;
+  text-align: left;
+}
+
+table, th, td {
+  border: 1.5px solid #35312e;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+/* Enjoying Pho Section and Images */
+
+.enjoying-pho {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 3rem;
+  margin: 5rem auto;
+}
+
+.enjoying-pho-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.enjoying-pho img {
+  display: block;
+  object-fit: cover;
+  border: 1px solid #35312e;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.enjoying-pho p {
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem auto;
+}
+
+/* Footer Section */
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #35312e;
+  width: 100%;
+  padding: 1.5rem 2rem 2rem 2rem;
+  margin: 0;
+  transition: all 0.3s ease;
+  gap: 1rem;
+  position: relative;
+  }
+
+#footer-section .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  margin: 0;
+  gap: 2rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.copyright p {
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  padding-top: 1rem;
+  background-color: #35312e;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Hamburger Menu */
+
+.menu-checkbox {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-left: auto;
+}
+
+.bar {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  transition: 0.4s ease;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .nav-container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 250px;
+    right: -250px;
+    height: 100vh;
+    top: 0;
+    padding: 80px 2rem 2rem 2rem;
+    z-index: 9;
+    background-color: #35312e;
+    transition: right 0.4s ease-in-out;
+    gap: 2.5rem;
+  }
+  
+  .nav-link {
+    width: fit-content;
+    margin: 0 15px;
+    padding: 0.5rem 0.5rem;
+  }
+
+  #hero-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .hero-content {
+    margin: 0;
+    align-items: center;
+  }
+
+  .hero-image {
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 2rem auto;
+  }
+
+  .ingredients-table,
+  .instructions {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 2rem;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .enjoying-pho-images {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 10;
+    margin-left: auto;
+  }
+  
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-checkbox:checked ~ .hamburger .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-44deg);
+  }
+  
+  .menu-checkbox:checked ~ .nav-menu {
+    right: 0;
+  }
+  .menu-checkbox:checked ~ .nav-menu .nav-link {
+    color: white;
+  }
+
+  .menu-checkbox:checked ~ .nav-menu .nav-link:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-checkbox:checked ~ .hamburger .bar {
+    background-color: white;
+  }
+}
